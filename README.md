@@ -3,24 +3,24 @@
 
 The following items in Data Structure are covered:
 
-Arrays 
+1. Arrays 
 
-Matrix
+2. Matrix
 
-Strings 
+3. Strings 
 
-Linked List 
+4. Linked List - Singly Linked List
 
-Stacks 
+5. Stacks 
 
-Queues 
+6. Queues 
 
-Trees 
+7. Trees 
 
-Searching 
+8. Searching 
 
-Sorting 
+9. Sorting  - Bubble Sort, Heap Sort, Insertion Sort, Merge Sort, Quick Sort, Selection Sort
 
-Graphs 
+10. Graphs 
 
-Advanced Data Strucure
+11. Advanced Data Strucure
