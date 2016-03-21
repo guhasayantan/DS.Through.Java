@@ -1,17 +1,18 @@
 package LinkedList;
 
-public class PrintMiddleNode {
+public class PrintNthNodeFromEnd {
 	
-	class Node 
+	class Node
 	{
 		int data;
 		Node next;
 		Node(int d)
 		{
-			this.data =d;
+			this.data = d;
 			this.next = null;
 		}
 	}
+	
 	class LinkedList
 	{
 		Node head, tail;
@@ -20,33 +21,41 @@ public class PrintMiddleNode {
 		{
 			Node node = new Node(value);
 			node.next = null;
-			if(head==null)
+			
+			if(head == null)
 			{
-				head=tail=node;
+				head = tail = node;
 			}
 			else
 			{
 				tail.next = node;
-				tail =  node;
+				tail = node;
 			}
 		}
 		
-		int middleNode()
+		int findNthNodefromEnd(int n)
 		{
-			Node slow= head , fast = head;
+			Node slow = head, fast= head;
+			int count=0;
+			while(count<n)
+			{
+				fast= fast.next;
+				count++;
+			}
 			while(fast.next!=null)
 			{
-				slow = slow.next;
-				fast = fast.next.next;
+				slow=slow.next;
+				fast = fast.next;
 			}
-			return slow.data;
+			return slow.next.data;
 		}
 	}
 	
 	public static void main(String[] args) {
 		
-		PrintMiddleNode prnt = new PrintMiddleNode();
-		LinkedList lnklist = prnt.new LinkedList();
+		PrintNthNodeFromEnd prntend = new PrintNthNodeFromEnd();
+		LinkedList lnklist = prntend.new LinkedList();
+		
 		lnklist.addNode(2);
 		lnklist.addNode(3);
 		lnklist.addNode(4);
@@ -55,8 +64,7 @@ public class PrintMiddleNode {
 		lnklist.addNode(7);
 		lnklist.addNode(8);
 		
-		System.out.println("The middle element is:  "+lnklist.middleNode());
-
+		System.out.println("Nth Node from the end: "+lnklist.findNthNodefromEnd(3));
 	}
 
 }
