@@ -1,4 +1,4 @@
-package DoublyLinkedList;
+package LinkedList.DoublyLinkedList;
 
 import java.util.Scanner;
 
